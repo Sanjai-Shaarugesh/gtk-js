@@ -2,5 +2,6 @@
 <gresources>
   <gresource prefix="/org/gtkjs/app/js">
     <file>main.js</file>
+    <file>Application.js</file>
   </gresource>
 </gresources>
