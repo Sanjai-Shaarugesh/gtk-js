@@ -8,8 +8,11 @@ export const FbrApplication = GObject.registerClass({
   vfunc_activate() {
     console.log("Hello! sanjai..");
     const window = new Gtk.ApplicationWindow({ application: this });
-    const label = new Gtk.Label({ label: "Hello sanjai 🥷" });
-    window.child = label;
+    // const label = new Gtk.Label({ label: "Hello sanjai 🥷" });
+    // window.child = label;
+
+    const box = new Gtk.Box({ orientation: Gtk.Orientation.VERTICAL });
+    window.child = box;
     window.present();
   }
 }
