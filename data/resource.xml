@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/org/gtkjs/app">
-    <file>main.js</file>
-    <file>Application.js</file>
-    <file>WelcomeWidget.js</file>
-    <file>Window.js</file>
+    <file>data/ui/WelcomeWidget.ui</file>
+    <file>data/ui/Window.ui</file>
   </gresource>
 </gresources>
-

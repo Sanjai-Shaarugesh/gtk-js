@@ -1,26 +1,24 @@
 #!@GJS@ -m
 
-import GLib from "gi://GLib";
+import GLib from 'gi://GLib';
 
-// Initalize the package
+// Initialize the package
 imports.package.init({
-  name: "@PACKAGE_NAME@",
-  version: "@PACKAGE_VERSION@",
-  prefix: '@PREFIX@',
-  libdir: '@LIBDIR@'
-
+	name: '@PACKAGE_NAME@',
+	version: '@PACKAGE_VERSION@',
+	prefix: '@PREFIX@',
+	libdir: '@LIBDIR@',
 });
 
-// Import the main module ndrun the mainfunction
+// Import the main module and run the main function
 const loop = new GLib.MainLoop(null, false);
-import("resource:///org/gtkjs/app/js/main.js")
-  .then((main) => {
-    GLib.idle_add(GLib.PRIORITY_DEFAULT_IDLE, () => {
-      loop.quit();
-      imports.package.run(main)
-      return GLib.SOURCE_REMOVE;
-
-    });
-  })
-  .catch(logError);
+import('resource:///org/gtkjs/app/main.js')
+	.then((main) => {
+		GLib.idle_add(GLib.PRIORITY_DEFAULT_IDLE, () => {
+			loop.quit();
+			imports.package.run(main);
+			return GLib.SOURCE_REMOVE;
+		});
+	})
+	.catch(logError);
 loop.run();
