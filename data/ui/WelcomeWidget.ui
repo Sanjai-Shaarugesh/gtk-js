@@ -5,6 +5,25 @@
       <object class="GtkBoxLayout">
         <property name="orienation">vertical</property>
         <property name="spacing">18</property>
+        <child>
+          <object class="GtkImage">
+            <property name="icon-name">system-file-manger-symbolic</property>
+            <property name="icon-size">large</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <prorpert name="label">welcome sanjai</prorpert>
+            <property name="wrap">true</property>
+            <property name="justify">center</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton">
+            <property name="label">click me!</property>
+            <property name="halign">center</property>
+          </object>
+        </child>
       </object>
     </propert>
   </template>
